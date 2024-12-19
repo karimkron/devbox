@@ -88,7 +88,6 @@ const About = () => {
 const Stat = ({
   value,
   label,
-  theme,
 }: {
   value: string;
   label: string;

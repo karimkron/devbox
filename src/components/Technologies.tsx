@@ -1,5 +1,5 @@
 import React, { useRef, useEffect, useState } from "react";
-import { Layout, Database, Server, Wrench } from "lucide-react";
+import { Wrench } from "lucide-react";
 import { useTheme } from "../contexts/ThemeContext";
 import { useTranslation } from "react-i18next";
 import { techStacks, additionalTools } from "./technologies/techData";
