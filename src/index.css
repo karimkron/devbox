@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* index.css */
+
+:root {
+  --background: 0 0% 100%; /* Color blanco */
+  --foreground: 0 0% 0%; /* Color negro */
+  --border: 0 0% 90%; /* Gris claro */
+  --primary: 240 100% 50%; /* Azul */
+  --primary-foreground: 0 0% 100%; /* Blanco */
+  --secondary: 120 50% 50%; /* Verde */
+  --secondary-foreground: 0 0% 100%; /* Blanco */
+  --destructive: 0 75% 50%; /* Rojo */
+  --destructive-foreground: 0 0% 100%; /* Blanco */
+  --muted: 0 0% 80%; /* Gris claro */
+  --muted-foreground: 0 0% 20%; /* Gris oscuro */
+  --accent: 300 75% 60%; /* Rosa */
+  --accent-foreground: 0 0% 100%; /* Blanco */
+  --card: 0 0% 95%; /* Fondo de tarjeta */
+  --card-foreground: 0 0% 10%; /* Texto oscuro */
+  --radius: 8px; /* Radio de bordes */
+}
+
+/* Tema oscuro */
+html.dark {
+  --background: 0 0% 10%; /* Fondo oscuro */
+  --foreground: 0 0% 90%; /* Texto claro */
+  --border: 0 0% 30%; /* Gris oscuro */
+  --primary: 240 100% 60%; /* Azul brillante */
+  --primary-foreground: 0 0% 10%; /* Texto oscuro */
+  --secondary: 120 40% 40%; /* Verde oscuro */
+  --secondary-foreground: 0 0% 90%; /* Blanco */
+  --destructive: 0 75% 40%; /* Rojo oscuro */
+  --destructive-foreground: 0 0% 90%; /* Blanco */
+  --muted: 0 0% 20%; /* Gris muy oscuro */
+  --muted-foreground: 0 0% 80%; /* Gris claro */
+  --accent: 300 50% 40%; /* Rosa oscuro */
+  --accent-foreground: 0 0% 90%; /* Blanco */
+  --card: 0 0% 20%; /* Fondo oscuro para tarjetas */
+  --card-foreground: 0 0% 80%; /* Texto claro */
+}
+
+/* Ajustar contenedor global */
+
+/* Estilos para números con gradiente */
+
+.gradient-number {
+  background: linear-gradient(135deg, #8b5cf6, #d946ef);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+  font-size: 7rem;
+  line-height: 1;
+  font-weight: 700;
+}
+
+:root {
+  --background: hsl(0, 0%, 100%); /* Blanco */
+  --foreground: hsl(0, 0%, 0%); /* Negro */
+}
+
+/* Tema oscuro */
+html.dark {
+  --background: #0c0c0c; /* Gris oscuro */
+  --foreground: hsl(0, 0%, 90%); /* Gris claro */
+}
+
+/* Estilos globales */
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  margin: 0;
+  font-family: "Arial", sans-serif;
+}

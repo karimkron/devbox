@@ -1,0 +1,36 @@
+.service-cardIconBackgound {
+  width: 20rem;
+  height: 20rem;
+  opacity: 40%;
+}
+/* Para pantallas menores de 400px */
+@media (max-width: 300px) {
+  .service-card {
+    width: 200px; /* Cambiar el tamaño de la tarjeta */
+    height: 320px; /* Cambiar la altura de la tarjeta */
+  }
+}
+
+/* Para pantallas entre 400px y 600px */
+@media (min-width: 400px) and (max-width: 600px) {
+  .service-card {
+    width: 250px; /* Cambiar el tamaño de la tarjeta */
+    height: 300px; /* Cambiar la altura de la tarjeta */
+  }
+}
+
+/* Para pantallas entre 601px y 1024px */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .service-card {
+    width: 350px; /* Cambiar el tamaño de la tarjeta */
+    height: 400px; /* Cambiar la altura de la tarjeta */
+  }
+}
+
+/* Para pantallas mayores de 1024px */
+@media (min-width: 1024px) {
+  .service-card {
+    width: 450px; /* Cambiar el tamaño de la tarjeta */
+    height: 500px; /* Cambiar la altura de la tarjeta */
+  }
+}
