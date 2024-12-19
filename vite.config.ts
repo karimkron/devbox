@@ -6,7 +6,6 @@ export default defineConfig({
   plugins: [
     react(),
     viteCompression({
-      algorithm: "brotli",
       ext: ".br",
     }),
     viteCompression({
@@ -27,11 +26,7 @@ export default defineConfig({
           i18n: ["i18next", "react-i18next"],
           tailwind: ["tailwindcss"],
           icons: ["lucide-react"],
-          utils: [
-            "@/utils/animations",
-            "@/utils/performance",
-            "@/utils/smoothScroll",
-          ],
+          utils: ["@/utils/animations", "@/utils/smoothScroll"],
         },
         assetFileNames: "assets/[hash][extname]",
         chunkFileNames: "js/[hash].js",
