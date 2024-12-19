@@ -26,7 +26,7 @@ export default defineConfig({
           i18n: ["i18next", "react-i18next"],
           tailwind: ["tailwindcss"],
           icons: ["lucide-react"],
-          utils: ["@/utils/animations", "@/utils/smoothScroll"],
+          utils: ["@/utils/smoothScroll"],
         },
         assetFileNames: "assets/[hash][extname]",
         chunkFileNames: "js/[hash].js",
