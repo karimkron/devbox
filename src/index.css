@@ -57,6 +57,17 @@ html.dark {
   font-weight: 700;
 }
 
+html,
+body {
+  overflow-x: hidden;
+  width: 100%;
+  position: relative;
+}
+
+#root {
+  overflow-x: hidden;
+}
+
 :root {
   --background: hsl(0, 0%, 100%); /* Blanco */
   --foreground: hsl(0, 0%, 0%); /* Negro */
