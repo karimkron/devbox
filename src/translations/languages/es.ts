@@ -105,17 +105,19 @@ export const es = {
 
   about: {
     name: "Karim",
-    role: "Fundador y CTO, Desarrollador Web Full Stack",
+    role: "Frelancer Desarrollador Web Full Stack",
     linkedinUrl: "https://linkedin.com/in/your-profile",
     howItStarted: "Cómo Empezó Todo",
     introduction:
-      "Hola, mi nombre es Karim - lo más importante en mi vida es el café. Trabajo en la industria del desarrollo web por placer propio, no persiguiendo dinero, pero teniendo mucha experiencia en la industria, puedo prometerte que el trabajo que asumamos se realizará de la mejor manera posible. Además, si nuestro equipo siente que no puede hacer el trabajo al 100%, no lo aceptaremos y te lo informaremos honestamente.",
-    careerHighlights:
-      "Destacados de mi carrera: En 2007 comencé en Nueva York como desarrollador web, en 2015 me mudé a Silicon Valley y trabajé como Ingeniero de Software en una startup en Palo Alto.",
+      "Hola, mi nombre es Karim - lo más importante en mi vida es el café. Trabajo en la industria del desarrollo web por placer propio, no persiguiendo dinero, pero teniendo años de experiencia en la industria, puedo prometerte que el trabajo que asumo se realizará de la mejor manera posible. Además, si siento que no puedo hacer el trabajo al 100%, no lo acepto y te lo informo honestamente.",
+    careerHighlights: "",
     stats: {
       experience: "Años de Experiencia",
+      experienceN: "5",
       projects: "Proyectos Terminados",
+      projectsN: "22+",
       coffee: "Cafés Tomados",
+      coffeeN: "28930+",
     },
   },
 

@@ -92,9 +92,9 @@ const Contact = () => {
               <div className="pt-4">
                 <button
                   type="submit"
-                  className={`w-full py-4 px-8 rounded-full text-white text-lg font-medium transition-all ${
+                  className={`w-full py-4 px-8 rounded-full text-lg font-medium transition-all ${
                     theme === "light"
-                      ? "bg-black hover:bg-gray-800"
+                      ? "bg-black hover:bg-gray-800 text-white"
                       : "bg-white hover:bg-gray-200 text-gray-950"
                   }`}
                 >

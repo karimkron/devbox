@@ -30,19 +30,16 @@ const Footer = () => {
       <div className="container mx-auto px-6 relative">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 mb-20">
           {/* Logo Section */}
+          {/* Logo Section */}
           <div className="space-y-8">
-            <div className="group cursor-pointer ">
+            <div className="group cursor-pointer">
               <img
                 src="/images/devbox.png"
                 alt="Logo"
                 className={`w-40 h-auto transition-all duration-300 ${
                   theme === "light"
-                    ? "brightness-100 hover:brightness-110"
-                    : "brightness-90 hover:brightness-100"
-                } ${
-                  theme === "light"
-                    ? "from-blue-600 to-purple-600"
-                    : "from-blue-400 to-purple-400"
+                    ? "brightness-0" // Esto hará el logo negro en modo claro
+                    : "brightness-100" // Esto mantendrá el logo blanco en modo oscuro
                 }`}
               />
             </div>

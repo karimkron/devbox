@@ -8,27 +8,29 @@ const About = () => {
 
   return (
     <section
-      className={`py-20 ${theme === "light" ? "bg-white" : "bg-[#0c0c0c]"}`}
+      className={`py-20 ${
+        theme === "light" ? "bg-white" : "bg-[#0c0c0c]"
+      } mx-[5%]`}
       id="about"
     >
-      <div className="container mx-auto px-6">
+      <div className="container mx-auto ">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Columna izquierda - Imagen y detalles */}
           <div className="space-y-6">
             <div
-              className={`rounded-3xl overflow-hidden p-8  ${
+              className={`rounded-3xl overflow-hidden ${
                 theme === "light" ? "bg-white" : "bg-[#0c0c0c]"
               }`}
             >
               <img
                 src="/images/karim.png" // Reemplaza con la ruta de tu imagen
                 alt="Profile"
-                className="w-72 h-72 rounded-2xl mx-auto"
+                className="w-auto h-auto rounded-2xl mx-auto"
               />
               <div className="mt-6 text-center">
                 <div className="flex items-center justify-center gap-3">
                   <h2
-                    className={`text-3xl font-bold  ${
+                    className={`text-3xl xl:text-5xl font-bold  ${
                       theme === "light" ? "text-[#0c0c0c]" : " text-white"
                     }`}
                   >
@@ -40,10 +42,12 @@ const About = () => {
                     rel="noopener noreferrer"
                     className="text-gray-400 hover:text-white transition-colors"
                   >
-                    <Linkedin className="w-6 h-6" />
+                    <Linkedin className="w-6 h-6 xl:w-10 xl:h-10" />
                   </a>
                 </div>
-                <p className="text-gray-400 mt-2">{t("about.role")}</p>
+                <p className="text-gray-400  xl:text-2xl mt-2">
+                  {t("about.role")}
+                </p>
               </div>
             </div>
           </div>
@@ -51,29 +55,36 @@ const About = () => {
           {/* Columna derecha - Historia y estadísticas */}
           <div className="space-y-8">
             <div>
-              <h3 className="text-4xl font-bold mb-6 text-white">
+              <h3
+                className={` text-3xl sm:text-4xl md:text-5xl xl:text-6xl font-bold mb-6 ${
+                  theme === "light" ? "text-[#0c0c0c]" : " text-white"
+                }`}
+              >
                 {t("about.howItStarted")}
               </h3>
-              <div className="space-y-4 text-gray-300 text-lg">
+              <div
+                className={` space-y-4 text-[15px] sm:text-xl md:text-2xl lg:text-2xl xl:text-3xl ${
+                  theme === "light" ? "text-slate-600" : " text-white"
+                }`}
+              >
                 <p>{t("about.introduction")}</p>
-                <p>{t("about.careerHighlights")}</p>
               </div>
             </div>
 
             {/* Estadísticas */}
-            <div className="grid grid-cols-3 gap-6 mt-12">
+            <div className="grid grid-cols-3 gap-4 mt-12">
               <Stat
-                value="17"
+                value={t("about.stats.experienceN")}
                 label={t("about.stats.experience")}
                 theme={theme}
               />
               <Stat
-                value="37"
+                value={t("about.stats.projectsN")}
                 label={t("about.stats.projects")}
                 theme={theme}
               />
               <Stat
-                value="39336+"
+                value={t("about.stats.coffeeN")}
                 label={t("about.stats.coffee")}
                 theme={theme}
               />
@@ -94,8 +105,10 @@ const Stat = ({
   theme: string;
 }) => (
   <div className="text-center">
-    <div className="text-5xl font-bold text-[#ff4b4b] mb-2">{value}</div>
-    <div className="text-gray-400 text-sm">{label}</div>
+    <div className="text-4xl sm:text-6xl md:text-7xl lg:text-5xl xl:text-7xl font-bold text-[#ff2c2c] mb-2">
+      {value}
+    </div>
+    <div className="text-gray-500 text-sm xl:text-xl">{label}</div>
   </div>
 );
 

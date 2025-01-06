@@ -21,12 +21,14 @@ const Portfolio = () => {
   return (
     <section
       id="portfolio"
-      className={`py-20 ${theme === "light" ? "bg-white" : "bg-[#0c0c0c]"}`}
+      className={`py-20 ${
+        theme === "light" ? "bg-white" : "bg-[#0c0c0c]"
+      } mx-[5%]  `}
     >
-      <div className="container mx-auto px-6">
+      <div className="px-2">
         <div className="text-center mb-16">
           <h2
-            className={`text-6xl md:text-7xl font-bold mb-[10%] ${
+            className={`text-4xl sm:text-5xl md:text-7xl font-bold mb-[10%] ${
               theme === "light" ? "text-gray-900" : "text-white"
             }`}
           >
@@ -34,7 +36,7 @@ const Portfolio = () => {
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 ">
           {projects.map((project) => (
             <PortfolioCard
               key={project.key}
@@ -49,14 +51,16 @@ const Portfolio = () => {
         </div>
 
         {/* Botón Ver Más Proyectos */}
-        <div className="text-center mt-[10%]">
+        <div className="text-center mt-[10%] ">
           <a
             href="/projects" // Ruta a la página de todos los proyectos
-            className={`inline-flex items-center gap-2 px-20 py-8 rounded-full text-lg font-medium transition-all hover:gap-9 ${
-              theme === "light"
-                ? "bg-gray-900 text-white hover:bg-gray-800"
-                : "bg-white text-gray-900 hover:bg-gray-100"
-            }`}
+            className={`inline-flex items-center gap-2 
+              px-11 py-4 sm:px-12 sm:py-5 md:px-16 md:py-7 lg:px-20 lg:py-8  
+              rounded-full text-lg md:text-2xl lg:text-3xl font-medium transition-all hover:gap-9 ${
+                theme === "light"
+                  ? "bg-gray-900 text-white hover:bg-gray-800"
+                  : "bg-white text-gray-900 hover:bg-gray-100"
+              }`}
           >
             {t("portfolio.viewMore")}
             <ArrowRight className="w-5 h-5" />
@@ -106,7 +110,7 @@ const PortfolioCard = ({
       </div>
 
       {/* Main content container */}
-      <div className="relative z-10 p-8 min-h-[600px] flex flex-col">
+      <div className="relative z-10 p-8 min-h-[400px] lg:min-h-[500px] flex flex-col">
         {/* Project title */}
         <h3 className="text-4xl font-bold mb-4 text-white">
           {t(`portfolio.projects.${projectKey}.title`)}

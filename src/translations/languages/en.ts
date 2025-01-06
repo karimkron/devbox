@@ -102,20 +102,23 @@ export const en = {
     },
   },
   about: {
-    name: "karim",
-    role: "Founder & CTO, Full Stack Web Developer",
+    name: "Karim",
+    role: "Freelance Full Stack Web Developer",
     linkedinUrl: "https://linkedin.com/in/your-profile",
     howItStarted: "How It Started",
     introduction:
-      "Hello, my name is karim - the most important thing in my life is coffee. I work in the web development industry for my own pleasure, not chasing money, but having a lot of experience in the industry, I can promise you that the work we take on will be done in the best possible way. Also, if our team does not feel that they can do the job 100%, we will not take it on, and we will honestly inform you about it.",
-    careerHighlights:
-      "Highlights of my career: In 2007 I started in New York as a website developer, in 2015 I moved to Silicon Valley and worked as a Software Engineer at a startup in Palo Alto.",
+      "Hi, my name is Karim - the most important thing in my life is coffee. I work in the web development industry for my own pleasure, not chasing money, but having years of experience in the industry, I can promise you that the work I take on will be done in the best possible way. Also, if I feel I can't do the job 100%, I won't take it and I'll honestly let you know.",
+    careerHighlights: "",
     stats: {
-      experience: "Years Of Experience",
+      experience: "Years of Experience",
+      experienceN: "5",
       projects: "Finished Projects",
+      projectsN: "22+",
       coffee: "Coffee Drunk",
+      coffeeN: "28930+",
     },
   },
+
   technologies: {
     title: "Tech Stack",
     subtitle: "Technologies and tools we specialize in",

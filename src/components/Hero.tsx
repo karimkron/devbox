@@ -132,6 +132,7 @@ const Hero = () => {
                 </div>
               </div>
             </motion.div>
+
             {/* Botón de contacto centrado en móviles */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -167,6 +168,38 @@ const Hero = () => {
                 </span>
               </button>
             </motion.div>
+
+            {/* Contact Button en despositivo grandes */}
+            <motion.button
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              onClick={() => smoothScroll("#contact")}
+              className="hidden md:block group relative overflow-hidden
+    px-12 sm:px-16 md:px-24 lg:px-36  
+    py-3 sm:py-4 md:py-4 lg:py-6
+    rounded-full transition-colors duration-300"
+              style={{
+                backgroundColor: currentColor,
+              }}
+            >
+              {/* Bolita blanca que se desliza */}
+              <span
+                className="absolute 
+      w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 lg:w-16 lg:h-16 
+      bg-white rounded-full 
+      left-2 top-1/2 -translate-y-1/2 
+      transition-all duration-500 ease-linear 
+      group-hover:translate-x-[calc(100%+8rem)] sm:group-hover:translate-x-[calc(100%+12rem)] md:group-hover:translate-x-[calc(100%+16rem)] lg:group-hover:translate-x-[calc(100%+24rem)]"
+              />
+              {/* Texto del botón */}
+              <span
+                className="relative z-10 text-white
+    text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl 
+    font-medium whitespace-nowrap"
+              >
+                {t("hero.cta.primary")}
+              </span>
+            </motion.button>
 
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -212,38 +245,6 @@ const Hero = () => {
                 </div>
               ))}
             </motion.div>
-
-            {/* Contact Button */}
-            <motion.button
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              onClick={() => smoothScroll("#contact")}
-              className="hidden md:block group relative overflow-hidden
-    px-12 sm:px-16 md:px-24 lg:px-36  
-    py-3 sm:py-4 md:py-4 lg:py-6
-    rounded-full transition-colors duration-300"
-              style={{
-                backgroundColor: currentColor,
-              }}
-            >
-              {/* Bolita blanca que se desliza */}
-              <span
-                className="absolute 
-      w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 lg:w-16 lg:h-16 
-      bg-white rounded-full 
-      left-2 top-1/2 -translate-y-1/2 
-      transition-all duration-500 ease-linear 
-      group-hover:translate-x-[calc(100%+8rem)] sm:group-hover:translate-x-[calc(100%+12rem)] md:group-hover:translate-x-[calc(100%+16rem)] lg:group-hover:translate-x-[calc(100%+24rem)]"
-              />
-              {/* Texto del botón */}
-              <span
-                className="relative z-10 text-white
-    text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl 
-    font-medium whitespace-nowrap"
-              >
-                {t("hero.cta.primary")}
-              </span>
-            </motion.button>
           </div>
 
           {/* Imagen del lado derecho en dispositivos grandes */}

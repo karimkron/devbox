@@ -104,18 +104,20 @@ export const fr = {
   },
 
   about: {
-    name: "Votre Nom",
-    role: "Fondateur et CTO, Développeur Web Full Stack",
+    name: "Karim",
+    role: "Développeur Web Full Stack Freelance",
     linkedinUrl: "https://linkedin.com/in/your-profile",
     howItStarted: "Comment Tout a Commencé",
     introduction:
-      "Bonjour, je m'appelle [Votre Nom] - la chose la plus importante dans ma vie est le café. Je travaille dans l'industrie du développement web pour mon propre plaisir, sans courir après l'argent, mais ayant beaucoup d'expérience dans l'industrie, je peux vous promettre que le travail que nous entreprenons sera fait de la meilleure façon possible. Aussi, si notre équipe sent qu'elle ne peut pas faire le travail à 100%, nous ne le prendrons pas, et nous vous en informerons honnêtement.",
-    careerHighlights:
-      "Points forts de ma carrière : En 2007, j'ai commencé à New York en tant que développeur de sites web, en 2015, j'ai déménagé dans la Silicon Valley et travaillé comme ingénieur logiciel dans une startup à Palo Alto.",
+      "Bonjour, je m'appelle Karim - la chose la plus importante dans ma vie est le café. Je travaille dans l'industrie du développement web pour mon propre plaisir, sans courir après l'argent, mais ayant des années d'expérience dans l'industrie, je peux vous promettre que le travail que j'entreprends sera fait de la meilleure façon possible. Aussi, si je sens que je ne peux pas faire le travail à 100%, je ne le prendrai pas et je vous en informerai honnêtement.",
+    careerHighlights: "",
     stats: {
       experience: "Années d'Expérience",
+      experienceN: "5",
       projects: "Projets Terminés",
+      projectsN: "22+",
       coffee: "Cafés Bus",
+      coffeeN: "28930+",
     },
   },
 

@@ -25,11 +25,6 @@ const Header = () => {
     { key: "services", href: "#services", label: t("nav.services") },
     { key: "portfolio", href: "#portfolio", label: t("nav.portfolio") },
     { key: "techStack", href: "#technologies", label: t("nav.techStack") },
-    {
-      key: "testimonials",
-      href: "#testimonials",
-      label: t("nav.testimonials"),
-    },
   ];
 
   return (
