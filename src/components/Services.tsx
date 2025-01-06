@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useState } from "react";
+import React, { useRef, useEffect, useState, TouchEvent } from "react";
 import { Layout, Code2, Database, Globe } from "lucide-react";
 import { useTheme } from "../contexts/ThemeContext";
 import { useTranslation } from "react-i18next";
@@ -13,6 +13,8 @@ const Services = () => {
   const [isDragging, setIsDragging] = useState(false); // Estado para determinar si el usuario está arrastrando.
   const [startX, setStartX] = useState(0); // Posición inicial del arrastre.
   const [scrollLeft, setScrollLeft] = useState(0); // Posición inicial del desplazamiento.
+  const [touchStart, setTouchStart] = useState(0);
+  const [isSwiping, setIsSwiping] = useState(false);
 
   // Definición de servicios
   const services = [
@@ -111,23 +113,41 @@ const Services = () => {
 
   // Función para manejar el inicio del arrastre.
   const handleMouseDown = (e: React.MouseEvent) => {
-    setIsDragging(true); // Activa el estado de arrastre.
-    setStartX(e.pageX - containerRef.current!.offsetLeft); // Guarda la posición inicial del mouse.
-    setScrollLeft(containerRef.current!.scrollLeft); // Guarda la posición inicial del desplazamiento.
+    setIsDragging(true);
+    setStartX(e.pageX - containerRef.current!.offsetLeft);
+    setScrollLeft(containerRef.current!.scrollLeft);
   };
 
-  // Función para manejar el movimiento durante el arrastre.
+  const handleTouchStart = (e: TouchEvent) => {
+    setIsSwiping(true);
+    setTouchStart(e.touches[0].clientX);
+    setScrollLeft(containerRef.current!.scrollLeft);
+  };
+
   const handleMouseMove = (e: React.MouseEvent) => {
-    if (!isDragging) return; // Si no se está arrastrando, no hace nada.
-    e.preventDefault(); // Previene el comportamiento predeterminado.
-    const x = e.pageX - containerRef.current!.offsetLeft; // Calcula la posición actual del mouse.
-    const walk = (x - startX) * 2; // Calcula la distancia recorrida.
-    containerRef.current!.scrollLeft = scrollLeft - walk; // Actualiza el desplazamiento del contenedor.
+    if (!isDragging) return;
+    e.preventDefault();
+    const x = e.pageX - containerRef.current!.offsetLeft;
+    const walk = (x - startX) * 2;
+    containerRef.current!.scrollLeft = scrollLeft - walk;
   };
 
-  // Función para manejar el fin del arrastre.
+  const handleTouchMove = (e: TouchEvent) => {
+    if (!isSwiping) return;
+    e.preventDefault();
+    const x = e.touches[0].clientX;
+    const walk = (touchStart - x) * 2;
+    if (containerRef.current) {
+      containerRef.current.scrollLeft = scrollLeft + walk;
+    }
+  };
+
   const handleMouseUp = () => {
-    setIsDragging(false); // Desactiva el estado de arrastre.
+    setIsDragging(false);
+  };
+
+  const handleTouchEnd = () => {
+    setIsSwiping(false);
   };
 
   return (
@@ -150,11 +170,18 @@ const Services = () => {
       {/* Carrusel */}
       <div
         ref={containerRef}
-        className="overflow-x-hidden cursor-grab active:cursor-grabbing"
+        className="overflow-x-hidden cursor-grab active:cursor-grabbing touch-action-none"
+        style={{
+          WebkitOverflowScrolling: "touch",
+          overscrollBehavior: "none",
+        }}
         onMouseDown={handleMouseDown}
         onMouseMove={handleMouseMove}
         onMouseUp={handleMouseUp}
         onMouseLeave={handleMouseUp}
+        onTouchStart={handleTouchStart}
+        onTouchMove={handleTouchMove}
+        onTouchEnd={handleTouchEnd}
       >
         <div className="flex gap-5 ">
           {extendedServices.map((service, index) => (

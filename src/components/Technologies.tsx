@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useState } from "react";
+import React, { useRef, useEffect, useState, TouchEvent } from "react";
 import { Wrench } from "lucide-react";
 import { useTheme } from "../contexts/ThemeContext";
 import { useTranslation } from "react-i18next";
@@ -21,6 +21,8 @@ const Technologies = () => {
   const [isDragging, setIsDragging] = useState(false);
   const [startX, setStartX] = useState(0);
   const [scrollLeft, setScrollLeft] = useState(0);
+  const [touchStart, setTouchStart] = useState(0);
+  const [isSwiping, setIsSwiping] = useState(false);
 
   // Duplicar los stacks para el scroll infinito
   const extendedTechStacks = [...techStacks, ...techStacks, ...techStacks];
@@ -81,6 +83,12 @@ const Technologies = () => {
     setScrollLeft(containerRef.current!.scrollLeft);
   };
 
+  const handleTouchStart = (e: TouchEvent) => {
+    setIsSwiping(true);
+    setTouchStart(e.touches[0].clientX);
+    setScrollLeft(containerRef.current!.scrollLeft);
+  };
+
   const handleMouseMove = (e: React.MouseEvent) => {
     if (!isDragging) return;
     e.preventDefault();
@@ -89,8 +97,22 @@ const Technologies = () => {
     containerRef.current!.scrollLeft = scrollLeft - walk;
   };
 
+  const handleTouchMove = (e: TouchEvent) => {
+    if (!isSwiping) return;
+    e.preventDefault();
+    const x = e.touches[0].clientX;
+    const walk = (touchStart - x) * 2;
+    if (containerRef.current) {
+      containerRef.current.scrollLeft = scrollLeft + walk;
+    }
+  };
+
   const handleMouseUp = () => {
     setIsDragging(false);
+  };
+
+  const handleTouchEnd = () => {
+    setIsSwiping(false);
   };
 
   // Componente de Tarjeta Tecnológica
@@ -191,11 +213,18 @@ const Technologies = () => {
         {/* Carrusel de tecnologías */}
         <div
           ref={containerRef}
-          className="overflow-x-hidden cursor-grab active:cursor-grabbing mb-12 sm:mb-16"
+          className="overflow-x-hidden cursor-grab active:cursor-grabbing touch-action-none"
+          style={{
+            WebkitOverflowScrolling: "touch",
+            overscrollBehavior: "none",
+          }}
           onMouseDown={handleMouseDown}
           onMouseMove={handleMouseMove}
           onMouseUp={handleMouseUp}
           onMouseLeave={handleMouseUp}
+          onTouchStart={handleTouchStart}
+          onTouchMove={handleTouchMove}
+          onTouchEnd={handleTouchEnd}
         >
           <div className="flex gap-4 sm:gap-6 md:gap-8 py-4 sm:py-8">
             {extendedTechStacks.map((stack, index) => (
