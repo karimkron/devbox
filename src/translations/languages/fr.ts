@@ -78,26 +78,26 @@ export const fr = {
     projects: {
       rollmaster: {
         title: "RollMaster",
-        category: "UI/UX",
+        category: "#UI/UX",
         year: "2023",
         viewProject: "Voir le Projet",
       },
       globalize: {
         title: "Globalize",
-        category: "UI/UX",
+        category: "#UI/UX",
         year: "2023",
         viewProject: "Voir le Projet",
       },
       fourYou: {
         title: "4You",
-        category: "UI/UX",
+        category: "#UI/UX",
         year: "2023",
         viewProject: "Voir le Projet",
       },
       schoolfield: {
         title: "SchoolField",
-        category: "UI/UX",
-        year: "2023",
+        category: "#Development",
+        year: "2022",
         viewProject: "Voir le Projet",
       },
     },

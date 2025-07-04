@@ -92,8 +92,8 @@ const Footer = () => {
               }`}
             >
               <li>Tarragona spain</li>
-              <li>holadevbox@gmail.com</li>
-              <li>+34 631 34 45 34</li>
+              <li>berbkarim@gmail.com</li>
+              <li>+34 624 09 25 45</li>
             </ul>
           </div>
 

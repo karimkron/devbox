@@ -98,30 +98,23 @@ const Hero = () => {
             >
               <div className="relative max-w-[80%] mx-auto">
                 <div className="relative">
-                  {/* Esferas girando en el fondo */}
-                  <div className="absolute inset-0 -z-10 ">
-                    <img
-                      src="/images/fondolaptop.png"
-                      alt=""
-                      className="absolute w-[150%] h-[150%] -top-[25%] -left-[25%]
-           opacity-80 animate-spin-slow select-none pointer-events-none
-           object-cover"
-                    />
-                  </div>
+
 
                   {/* Video dentro de la pantalla del laptop */}
-                  <div className="absolute top-[2%] left-[9%] right-[9%] bottom-[10%] z-10 overflow-hidden rounded-[1%]">
-                    <video
-                      autoPlay
-                      loop
-                      muted
-                      playsInline
-                      className="absolute top-0 left-0 w-full h-full object-cover"
-                    >
-                      <source src="/videos/fondo.mp4" type="video/mp4" />
-                      Tu navegador no soporta el elemento de video.
-                    </video>
-                  </div>
+                <div className="absolute top-[2%] left-[9%] right-[9%] bottom-[10%] z-10 overflow-hidden rounded-[1%]">
+                 <video
+                   autoPlay
+                    loop
+                    muted
+                   playsInline
+                   poster="/public/images/fondo-preview.png"
+                   className="absolute top-0 left-0 w-full h-full object-cover"
+                 >
+                    <source src="/videos/fondo.mp4" type="video/mp4" />
+                   Tu navegador no soporta el elemento de video.
+                 </video>
+                </div>
+
 
                   {/* Imagen del laptop */}
                   <img

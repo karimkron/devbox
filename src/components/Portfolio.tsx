@@ -121,7 +121,7 @@ const PortfolioCard = ({
           href={website}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex-1 relative mt-4 overflow-hidden cursor-pointer"
+          className="flex-1 relative mt-0 p-6 overflow-hidden cursor-pointer"
         >
           <div className="relative w-full h-full group">
             <img

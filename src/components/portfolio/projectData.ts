@@ -3,32 +3,31 @@ import { Project } from "./types";
 export const projects: Project[] = [
   {
     key: "rollmaster",
-    image: "/images/peluqueriabella.png",
+    image: "/images/rollmaster/tire-shop.png",
     background: "",
-    website: "https://peluqueria-bella.onrender.com",
+    website: "",
     direction: "right",
   },
   {
     key: "globalize",
-    image: "/images/peluqueriabella.png",
-    background:
-      "https://img.freepik.com/vector-gratis/fondo-escritorio-moderno-vector-diseno-azul-geometrico_53876-135923.jpg",
-    website: "https://peluqueria-bella.onrender.com",
+    image: "/images/Globalize/layer-two-thumb-one.png",
+    background: "/images/Globalize/thumb-layer-two.png",
+    website: "",
     direction: "left",
   },
   {
     key: "fourYou",
-    image: "/images/peluqueriabella.png",
+    image: "/images/fourYou/health-care-laptop.png",
     background:
       "https://img.freepik.com/vector-gratis/fondo-abstracto-negro-azul_1340-17012.jpg?semt=ais_hybrid",
-    website: "https://peluqueria-bella.onrender.com",
+    website: "",
     direction: "right",
   },
   {
     key: "schoolfield",
-    image: "/images/peluqueriabella.png",
+    image: "/images/schoolfield/thumb-new1.png",
     background: "",
-    website: "https://peluqueria-bella.onrender.com",
+    website: "",
     direction: "left",
   },
 ];
